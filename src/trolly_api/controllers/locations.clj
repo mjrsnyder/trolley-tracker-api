@@ -1,7 +1,6 @@
 (ns trolly-api.controllers.locations
 	(:require [compojure.core :refer [defroutes GET POST context]]
               [ring.util.response :refer [response]]
-              [trolly-api.views.locations :as view]
               [trolly-api.models.location :as model]))
 
 (defroutes routes
