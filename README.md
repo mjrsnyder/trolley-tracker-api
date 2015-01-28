@@ -1,14 +1,28 @@
 # trolley-tracker-api
 
-Currently deployed on Digital Ocean 
+###Currently deployed on Digital Ocean 
 
-Clojure / Postgres / Nginx
+###http://104.131.44.166/
 
-#Interaction
-##GET
+###Clojure / Postgres / Nginx
 
-http://104.131.44.166/api/trolly/1/location
+#Authentication
+##Roles
 
-##POST
+### Admin
+ - Adds account (POST /api/v1/account)
+ - Updates account (POST /api/v1/account/:id)
+ - Reads account (GET /api/v1/account/:id)
 
-curl -X POST -H "Content-Type:application/json" -H "Cache-Control:no-cache" -H "Postman-Token:a963db09-aca3-dbd5-8ed7-fdc21c5595f6" -d '{"lon":"-82.4046505", "lat":"34.844403"}' http://104.131.44.166:3000/api/trolly/1/location
+### Vehicle
+ - Adds location (POST /api/v1/trolly/:id/location)
+
+### App
+ - Reads location (GET /api/v1/trolly/:id/location)
+
+### Test Credentials (basic auth)
+ - brigade / brigade
+
+##Find The Fake Trolly:
+curl -u brigade:brigade http://104.131.44.166/api/v1/trolly/1/location
+
