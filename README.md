@@ -1,14 +1,14 @@
-# trolly-api
+# trolley-tracker-api
 
-A Clojure library designed to ... well, that part is up to you.
+Currently deployed on Digital Ocean 
 
-## Usage
+Clojure / Postgres / Nginx
 
-FIXME
+#Interaction
+##GET
 
-## License
+http://104.131.44.166/api/trolly/1/location
 
-Copyright © 2014 FIXME
+##POST
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+curl -X POST -H "Content-Type:application/json" -H "Cache-Control:no-cache" -H "Postman-Token:a963db09-aca3-dbd5-8ed7-fdc21c5595f6" -d '{"lon":"-82.4046505", "lat":"34.844403"}' http://104.131.44.166:3000/api/trolly/1/location
