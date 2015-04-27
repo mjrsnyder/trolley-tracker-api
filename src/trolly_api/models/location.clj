@@ -5,7 +5,8 @@
 
 (defn ^:private deconstruct-point [point]
 	(def match (re-seq #"-?\d*\.\d*" point))
-	{:lon (first match) :lat (last match)})
+	{:lon (bigdec (first match)) :lat (bigdec (last match))})
+
 
 (defn latest [for-trolly-id]
 	(update-in 

@@ -7,7 +7,7 @@
 (defroutes routes
   (context "/trolly/:trolly-id" [trolly-id]
     (GET "/location" request
-   		(friend/authorize #{"app"} )
+   		;(friend/authorize #{"app"} )
    		(response (model/latest trolly-id)))
     (POST "/location" {body :body} 
     	(friend/authorize #{"vehicle"} )
